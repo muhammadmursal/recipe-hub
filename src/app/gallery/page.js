@@ -3,8 +3,14 @@
 import { useState } from "react";
 
 export default function Gallery() {
-  const [images, setImages] = useState([]);
-
+  const [images, setImages] = useState([
+    "https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?w=400",
+    "https://images.unsplash.com/photo-1596797038530-2c107229654b?w=400",
+    "https://images.unsplash.com/photo-1631452180519-c014fe946bc7?w=400",
+    "https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=400",
+    "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=400",
+    "https://images.unsplash.com/photo-1567337710282-00832b415979?w=400",
+  ]);
   function handleImageUpload(e) {
     const file = e.target.files[0];
     const imageUrl = URL.createObjectURL(file);
