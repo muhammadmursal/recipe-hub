@@ -1,9 +1,4 @@
-import { recipes } from "@/lib/recipes";
-
-export async function GET() {
-  return Response.json(recipes);
-}
-const recipes = [
+export const recipes = [
   {
     id: 1,
     title: "Chicken Karahi",
@@ -47,7 +42,3 @@ const recipes = [
     ],
   },
 ];
-
-export async function GET() {
-  return Response.json(recipes);
-}

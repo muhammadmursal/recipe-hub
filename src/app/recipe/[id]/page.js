@@ -1,11 +1,8 @@
 import Link from "next/link";
+import { recipes } from "@/lib/recipes";
 
 export default async function RecipeDetail({ params }) {
   const { id } = await params;
-
-  const res = await fetch("http://localhost:3000/api/recipes");
-  const recipes = await res.json();
-
   const recipe = recipes.find((r) => r.id === Number(id));
 
   return (
